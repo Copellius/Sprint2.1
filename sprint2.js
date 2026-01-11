@@ -116,16 +116,14 @@ procesarCadena(cadena, printEl);
 
 /*Ej 1.4*/
 
-/*1 -Spread */
+/*1*/
 
 const array1 = [1, 2];
 const array2 = [3, 4];
 
 const array3 = [...array1, ...array2];
 
-console.log(array3);
-
-/*2 - Spread*/
+/*2*/
 
 function suma(...numeros) {
   let total = 0;
@@ -135,9 +133,7 @@ function suma(...numeros) {
   return total;
 }
 
-console.log(suma(1, 2, 5, 5));
-
-/*3 - Spread*/
+/*3*/
 
 const objeto1 = {
   nombre: "Juan",
@@ -149,28 +145,19 @@ const objeto2 = { ...objeto1 };
 
 objeto2.nombre = "Pepe";
 
-console.log(objeto1);
-console.log(objeto2);
-
-/*4 - Destructuring */
+/*4*/
 
 const arr = ["mar", 2, 27, "tutú", 43];
 
 const [first, second, ...rest] = arr;
 
-console.log(first);
-console.log(second);
-console.log(rest);
-
-/*5 - Spread*/
+/*5*/
 
 let sum = (a, b, c) => a + b + c;
 
 const arrNums = [1, 2, 3];
 
-console.log(sum(...arrNums));
-
-/*6 - Spread, fusion*/
+/*6*/
 
 const obj2 = {
   DNI: 123,
@@ -183,33 +170,27 @@ const obj1 = {
 
 const obj3 = { ...obj1, ...obj2 };
 
-console.log(obj3);
-
 /*Ej 1.5 -Array transformations*/
 
-/*1 - MAP copy and manipulate*/
+/*1*/
 
 const testArr = [1, 2, 3, 4];
 
 const doubled = testArr.map((n) => n * 2);
 
-console.log(doubled);
 
-/*2 - FILTER copy and take some*/
+/*2*/
 
 const pares = testArr.filter((n) => n % 2 == 0);
 
-console.log(pares);
 
-/*3 - FIND, igual que filter pero para en la 1ra coincidencia*/
+/*3*/
 
 const testArr2 = [1, 10, 8, 11];
 
 const result = testArr2.find((n) => n > 10);
 
-console.log(result);
-
-/*4 - REDUCE sum all elements and return it*/
+/*4*/
 
 const testArr3 = [3, 7, 8, 21];
 
@@ -217,9 +198,7 @@ const suma2 = testArr3.reduce((accumulador, n) => {
   return accumulador + n;
 }, 0);
 
-console.log(suma2);
-
-/*5 - combine it all*/
+/*5*/
 
 const arr5 = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
 
@@ -230,41 +209,34 @@ const result2 = arr5
     return acc + n;
   }, 0);
 
-console.log(result2);
-
-/*6 - EVERY & SOME, checkea si la condicion se cumple, devuelve solo boolean*/
+/*6*/
 
 const arr6 = [11, 12, 13, 14];
 
 const isGreater = arr6.every((n) => n > 10);
 const isGreater2 = arr6.some((n) => n > 10);
 
-console.log(isGreater);
-console.log(isGreater2);
-
 /*Ej 1.6 -Array loops*/
 
-/*1 - forEach, iterate and print*/
+/*1*/
 
 let nombres = ["Anna", "Bernat", "Clara"];
 
 nombres.forEach((nombre) => console.log(nombre));
 
-/*2 - for-of, iterate and print*/
+/*2*/
 
 for (let nombre of nombres) {
   console.log(nombre);
 }
 
-/*3 - filter, numeros pares*/
+/*3*/
 
 let numerosDevuelta = [1, 2, 3, 4, 5, 6];
 
 let numPares = numerosDevuelta.filter((n) => n % 2 == 0);
 
-console.log(numPares);
-
-/*4 - FOR-IN, iterar e imprimir*/
+/*4*/
 
 let obj = {
   nombre: "Ola",
@@ -276,7 +248,7 @@ for (let key in obj) {
   console.log(`${key}: ${obj[key]}`);
 }
 
-/*5 - FOR-OF con break, iterar para buscar*/
+/*5*/
 
 let numeros = [1, 2, 3, 4, 5, 6];
 
@@ -287,7 +259,7 @@ for (let num of numeros) {
   }
 }
 
-/*6 - FOR-OF con INDEX, iterar para buscar*/
+/*6*/
 
 let i = 0;
 
@@ -296,9 +268,9 @@ for (let nombre of nombres) {
   i++;
 }
 
-/*Ej 1.7 - Promises & Async/Await*/
+/*Ej 1.7*/
 
-/*1 - Promises*/
+/*1*/
 
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -306,13 +278,13 @@ const myPromise = new Promise((resolve, reject) => {
   });
 });
 
-/*2 - Promises adding then*/
+/*2*/
 
 myPromise.then((message) => {
   console.log(message);
 });
 
-/*3 - Promises con reject*/
+/*3*/
 
 const myPromise2 = new Promise((resolve, reject) => {
   const input = "hello";
@@ -335,7 +307,7 @@ myPromise2
     console.log(message);
   });
 
-/*4 - ASYNC/AWAIT */
+/*4*/
 
 
 async function greet(){
@@ -344,7 +316,7 @@ async function greet(){
 
 greet()
 
-/*5 - TRY/CATCH */
+/*5*/
 
 async function greet(){
   try{
@@ -355,7 +327,7 @@ async function greet(){
   }
 }
 
-/*6 - PROMISE.ALL */
+/*6*/
 
 const p1 = new Promise((resolve) => {
   setTimeout(() => {
